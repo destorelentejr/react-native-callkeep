@@ -97,10 +97,10 @@ RCT_EXPORT_MODULE()
 }
 
 + (void)initCallKitProvider {
-    if (sharedProvider == nil) {
+    // if (sharedProvider == nil) {
         NSDictionary *settings = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"RNCallKeepSettings"];
         sharedProvider = [[CXProvider alloc] initWithConfiguration:[RNCallKeep getProviderConfiguration:settings]];
-    }
+    // }
 }
 
 RCT_EXPORT_METHOD(setup:(NSDictionary *)options)
